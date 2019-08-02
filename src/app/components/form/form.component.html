@@ -1,0 +1,62 @@
+<div class="_32LSmx sizing">
+    <div class="_1XBjg- row">
+        <div class="Og_iib col col-2-5 _3SWFXF"><span class="_1hgiYz"><span>Add Customer</span></span>
+            <p class="_1NJjZd"><span>Get access to your Orders, Wishlist and Recommendations</span></p>
+        </div>
+        <div class="Km0IJL col col-3-5">
+            <div>
+                <form autocomplete="on">
+                    <div class="_39M2dM JB4AMj"><input name="firstName" [(ngModel)]="user.firstName" type="text"
+                            autocomplete="on" class="_2zrpKA _2rqcw- _1dBPDZ" value=""><span class="s-YM1W"></span><label
+                            class="b5konl"><span>First Name</span></label>
+                    </div>
+
+                    <div class="_39M2dM JB4AMj"><input name="lastName" [(ngModel)]="user.lastName" type="text"
+                            autocomplete="on" class="_2zrpKA _2rqcw- _1dBPDZ" value=""><span class="s-YM1W"></span><label
+                            class="b5konl"><span>Last Name</span></label>
+                    </div>
+
+                    <div class="_39M2dM JB4AMj"><input name="email" [(ngModel)]="user.email" type="email"
+                            autocomplete="on" class="_2zrpKA _2rqcw- _1dBPDZ" value=""><span class="s-YM1W"></span><label
+                            class="b5konl"><span>Email</span></label></div>
+
+                    <div class="_39M2dM JB4AMj"><input name="phone" [(ngModel)]="user.phone" type="phone"
+                            autocomplete="on" class="_2zrpKA _3v41xv _2rqcw- _1dBPDZ" value=""><span
+                            class="s-YM1W"></span><label class="b5konl"><span>Phone</span></label><a
+                            class="_21JmK0 _1__46T" tabindex="-1"></a></div>
+
+                    <div class="_39M2dM JB4AMj"><input name="address" [(ngModel)]="user.address" type="text"
+                            autocomplete="on" class="_2zrpKA _2rqcw- _1dBPDZ" value=""><span class="s-YM1W"></span><label
+                            class="b5konl"><span>Address</span></label>
+                    </div>
+
+                    <select name="productName" aria-placeholder="Product Name" [(ngModel)]="user.productName"
+                        class="_39M2dM JB4AMj _2zrpKA _2rqcw- _1dBPDZ s-YM1W">
+                        <option value="#" disabled selected>Select Product Name</option>
+                        <option value="volvo" [ngValue]="volvo">Volvo</option>
+                        <option value="saab" [ngValue]="saab">Saab</option>
+                        <option value="mercedes" [ngValue]="mercedes">Mercedes</option>
+                        <option value="audi" [ngValue]="audi">Audi</option>
+                    </select>
+
+                    <div class="_39M2dM JB4AMj"><input name="cal" [(ngModel)]="user.cal" type="text" autocomplete="on"
+                            class="_2zrpKA _2rqcw- _1dBPDZ" value=""><span class="s-YM1W"></span><label
+                            class="b5konl"><span>CAL</span></label>
+                    </div>
+
+                    <div class="_39M2dM JB4AMj"><input name="date" [(ngModel)]="user.expiry" type="date"
+                            autocomplete="on" class="_2zrpKA _2rqcw- _1dBPDZ" value=""><span class="s-YM1W"></span><label
+                            class="b5konl"><span>Expiry</span></label>
+                    </div>
+
+                    <div class="_1avdGP"><button (click)="addCustomer()" class="_2AkmmA _1LctnI _7UHT_c" type="submit">
+                            <div class="_2VTdOs _1_qmw3"><svg class="_2zN0mv" viewBox="25 25 50 50">
+                                    <circle stroke="#fff" class="_1VgS7d" cx="50" cy="50" r="20" fill="none"
+                                        stroke-width="5" stroke-miterlimit="10"></circle>
+                                </svg></div><span>Add</span>
+                        </button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
