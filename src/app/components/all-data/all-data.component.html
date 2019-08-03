@@ -1,47 +1,472 @@
-<div class="limiter">
-    <div class="container-table100">
-        <div class="wrap-table100">
-            <div class="table100 ver1 m-b-110">
-                <div class="table100-head">
-                    <table>
-                        <thead>
-                            <tr class="row100 head">
-                                <!-- <th class="cell100 column5 sizing">First Name</th>
-                                <th class="cell100 column5 sizing">Last Name</th> -->
-                                <th class="cell100 column5 sizing">Name</th>
-                                <th class="cell100 column5 sizing">Email</th>
-                                <th class="cell100 column5">Phone No</th>
-                                <th class="cell100 column5">Price Plan</th>
-                                <th class="cell100 column5">Address</th>
-                                <th class="cell100 column5">CAL</th>
-                                <th class="cell100 column5">Expiry Date</th>
-                                <th class="cell100 column5">Action</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="table100-body js-pscroll ps ps--active-y">
-                    <table>
-                        <tbody>
-                            <tr *ngFor="let user of users;" class="row100 body">
-                                <!-- <td class="cell100 column5 sizing">{{user.firstName}}</td>
-                                <td class="cell100 column5 sizing">{{user.lastName}}</td> -->
-                                <td class="cell100 column5 sizing">{{user.firstName + " " + user.lastName}}</td>
-                                <td class="cell100 column5">{{user.email}}</td>
-                                <td class="cell100 column5">{{user.phone}}</td>
-                                <td class="cell100 column5">{{user.productName}}</td>
-                                <td class="cell100 column5">{{user.address}}</td>
-                                <td class="cell100 column5">{{user.cal}}</td>
-                                <td class="cell100 column5">{{user.expiry}}</td>
-                                <td class="cell100 column5"><a routerLink="/edit/{{user._id}}"><i class="material-icons">edit</i></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="ps__rail-x" style="left: 0px; bottom: -88px;">
-                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+<div class="page default">
+    <div class="wrap">
+        <!-- <div class="header-outer new">
+            <div class="header-cnt new">
+                <div class="header"><a href="https://www.myntra.com/?src=logo" class="logo">
+                        <div class="header-sprite mlogo"></div>
+                    </a>
+                    <div class="actions"><a href="/my/dashboard" target="_self" class="user"><span
+                                class="pic header-sprite icon-user"></span><span
+                                class="caret header-sprite"></span></a><a href="https://www.myntra.com/checkout/cart"
+                            target="_self" data-track="bag" class="cart"><span class="text">Bag</span>
+                            <div class="badge grey">0</div>
+                        </a></div>
+                    <div class="query"><input id="q" placeholder="Search" autocomplete="off"><a class="submit"><span
+                                class="header-sprite icon-search"></span></a></div>
+                    <div class="navbar">
+                        <div class="head"><a href="https://www.myntra.com/shop/men" data-index="0"
+                                class="main">Men</a><a href="https://www.myntra.com/shop/women" data-index="1"
+                                class="main">Women</a><a href="https://www.myntra.com/shop/kids" data-index="2"
+                                class="main">Kids</a><a href="https://www.myntra.com/shop/home-living" data-index="3"
+                                class="main">Home &amp; Living</a></div>
                     </div>
-                    <div class="ps__rail-y" style="top: 88px; height: 585px; right: 5px;">
-                        <div class="ps__thumb-y" tabindex="0" style="top: 44px; height: 294px;"></div>
+                </div>
+                <div class="pane-cnt"><a class="tab" data-index="3" href="https://www.myntra.com/shop/home-living"
+                        style="top: -62px; left: 377.775px; width: 111px; height: 56px; border-color: rgb(242, 194, 16);"></a>
+                    <div data-index="0" data-color="#ee5f73" class="pane fashion" style="padding-left: 10px;">
+                        <div class="block"><a href="https://www.myntra.com/men-topwear" style="color:#ee5f73"
+                                class="title">Topwear</a><a href="https://www.myntra.com/men-tshirts"
+                                class="link">T-Shirts</a><a href="https://www.myntra.com/men-casual-shirts"
+                                class="link">Casual Shirts</a><a href="https://www.myntra.com/men-formal-shirts"
+                                class="link">Formal Shirts</a><a href="https://www.myntra.com/men-sweatshirts"
+                                class="link">Sweaters &amp; Sweatshirts</a><a
+                                href="https://www.myntra.com/men-jackets-coats" class="link">Jackets &amp; Coats</a><a
+                                href="https://www.myntra.com/men-blazers-waistcoats" class="link">Blazers &amp;
+                                Waistcoats</a><a href="https://www.myntra.com/men-suits" class="link">Suits</a><a
+                                href="https://www.myntra.com/clothing-fabric" class="link">Clothing Fabric</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-bottomwear"
+                                style="color:#ee5f73" class="title">Bottomwear</a><a
+                                href="https://www.myntra.com/men-jeans" class="link">Jeans</a><a
+                                href="https://www.myntra.com/men-casual-trousers" class="link">Casual Trousers</a><a
+                                href="https://www.myntra.com/men-formal-trousers" class="link">Formal Trousers</a><a
+                                href="https://www.myntra.com/men-shorts" class="link">Shorts</a><a
+                                href="https://www.myntra.com/men-trackpants" class="link">Track Pants &amp; Joggers</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/men-sportswear" style="color:#ee5f73"
+                                class="title">Sports &amp; Active Wear</a><a
+                                href="https://www.myntra.com/men-sports-wear-tshirts" class="link">Active T-Shirts</a><a
+                                href="https://www.myntra.com/men-track-pants" class="link">Track Pants &amp;
+                                Shorts</a><a href="https://www.myntra.com/men-sports-jackets" class="link">Jackets &amp;
+                                Sweatshirts</a><a href="https://www.myntra.com/men-swimwear" class="link">Swimwear</a><a
+                                href="https://www.myntra.com/smart-wearables" class="link">Smart Wearables</a><a
+                                href="https://www.myntra.com/men-sports-accessories" class="link">Sports
+                                Accessories</a><a href="https://www.myntra.com/men-sports-equipments"
+                                class="link">Sports Equipment</a><a href="https://www.myntra.com/men-sports-shoes"
+                                class="link">Sports Shoes</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-ethnic-wear"
+                                style="color:#ee5f73" class="title">Indian &amp; Festive Wear</a><a
+                                href="https://www.myntra.com/men-kurtas" class="link">Kurtas &amp; Kurta Sets</a><a
+                                href="https://www.myntra.com/sherwani" class="link">Sherwanis</a><a
+                                href="https://www.myntra.com/nehru-jackets" class="link">Nehru Jackets</a><a
+                                href="https://www.myntra.com/men-dhoti" class="link">Dhoti</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-plus-size-menu"
+                                style="color:#ee5f73" class="title">Plus Size</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/men-innerwear" style="color:#ee5f73"
+                                class="title">Innerwear &amp; Sleepwear</a><a
+                                href="https://www.myntra.com/men-briefs-and-trunks" class="link">Briefs &amp;
+                                Trunks</a><a href="https://www.myntra.com/men-boxers" class="link">Boxers</a><a
+                                href="https://www.myntra.com/men-innerwear-vests" class="link">Vests</a><a
+                                href="https://www.myntra.com/men-nightwear" class="link">Sleepwear &amp;
+                                Loungewear</a><a href="https://www.myntra.com/men-thermals" class="link">Thermals</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-footwear"
+                                style="color:#ee5f73" class="title">Footwear</a><a
+                                href="https://www.myntra.com/men-casual-shoes" class="link">Casual Shoes</a><a
+                                href="https://www.myntra.com/men-sports-shoes" class="link">Sports Shoes</a><a
+                                href="https://www.myntra.com/men-formal-shoes" class="link">Formal Shoes</a><a
+                                href="https://www.myntra.com/men-sandals" class="link">Sandals &amp; Floaters</a><a
+                                href="https://www.myntra.com/men-flip-flops" class="link">Flip Flops</a><a
+                                href="https://www.myntra.com/men-socks" class="link">Socks</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/mens-watches"
+                                style="color:#ee5f73" class="title">Watches &amp; Wearables</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-sunglasses"
+                                style="color:#ee5f73" class="title">Sunglasses &amp; Frames</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/headphones-speakers" style="color:#ee5f73"
+                                class="title">Headphones &amp; Speakers</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-bags-backpacks"
+                                style="color:#ee5f73" class="title">Bags &amp; Backpacks</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/trolley-bags"
+                                style="color:#ee5f73" class="title">Luggage &amp; Trolleys</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/men-personal-care"
+                                style="color:#ee5f73" class="title">Personal Care &amp; Grooming</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/men-accessories" style="color:#ee5f73"
+                                class="title">Fashion Accessories</a><a href="https://www.myntra.com/men-wallets"
+                                class="link">Wallets</a><a href="https://www.myntra.com/men-belts"
+                                class="link">Belts</a><a href="https://www.myntra.com/men-belts-ties" class="link">Ties,
+                                Cufflinks &amp; Pocket Squares</a><a
+                                href="https://www.myntra.com/men-accessory-gift-set" class="link">Accessory Gift
+                                Sets</a><a href="https://www.myntra.com/helmets" class="link">Helmets</a><a
+                                href="https://www.myntra.com/men-caps" class="link">Caps &amp; Hats</a><a
+                                href="https://www.myntra.com/men-gloves-mufflers-scarves" class="link">Mufflers, Scarves
+                                &amp; Gloves</a><a href="https://www.myntra.com/mobile-phone-cases" class="link">Phone
+                                Cases</a><a href="https://www.myntra.com/men-travel-accessories" class="link">Travel
+                                Accessories</a><a href="https://www.myntra.com/men-jewellery" class="link">Rings &amp;
+                                Wristwear</a>
+                            <div class="whitespace"></div>
+                        </div>
+                    </div>
+                    <div data-index="1" data-color="#fb56c1" class="pane fashion" style="padding-left: 10px;">
+                        <div class="block"><a href="https://www.myntra.com/fusion-wear" style="color:#fb56c1"
+                                class="title">Indian &amp; Fusion Wear</a><a
+                                href="https://www.myntra.com/women-kurtas-kurtis-suits" class="link">Kurtas &amp;
+                                Suits</a><a href="https://www.myntra.com/women-ethnic-tops" class="link">Kurtis, Tunics
+                                &amp; Tops</a><a href="https://www.myntra.com/women-ethnic-dresses" class="link">Ethnic
+                                Dresses</a><a href="https://www.myntra.com/women-ethnic-bottomwear"
+                                class="link">Leggings, Salwars &amp; Churidars</a><a
+                                href="https://www.myntra.com/skirts-palazzos" class="link">Skirts &amp; Palazzos</a><a
+                                href="https://www.myntra.com/saree" class="link">Sarees &amp; Blouses</a><a
+                                href="https://www.myntra.com/dress-material" class="link">Dress Material</a><a
+                                href="https://www.myntra.com/lehenga-choli" class="link">Lehenga Choli</a><a
+                                href="https://www.myntra.com/dupatta-shawl" class="link">Dupattas &amp; Shawls</a><a
+                                href="https://www.myntra.com/women-ethnic-wear-jackets" class="link">Jackets &amp;
+                                Waistcoats</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/womens-western-wear" style="color:#fb56c1"
+                                class="title">Western Wear</a><a href="https://www.myntra.com/dresses-and-jumpsuits"
+                                class="link">Dresses &amp; Jumpsuits</a><a
+                                href="https://www.myntra.com/women-shirts-tops-tees" class="link">Tops, T-Shirts &amp;
+                                Shirts</a><a href="https://www.myntra.com/women-jeans-jeggings" class="link">Jeans &amp;
+                                Jeggings</a><a href="https://www.myntra.com/women-trousers" class="link">Trousers &amp;
+                                Capris</a><a href="https://www.myntra.com/women-shorts-skirts" class="link">Shorts &amp;
+                                Skirts</a><a href="https://www.myntra.com/women-shrugs" class="link">Shrugs</a><a
+                                href="https://www.myntra.com/women-sweaters-sweatshirts" class="link">Sweaters &amp;
+                                Sweatshirts</a><a href="https://www.myntra.com/women-jackets-coats" class="link">Jackets
+                                &amp; Coats</a><a href="https://www.myntra.com/women-blazers-waistcoats"
+                                class="link">Blazers &amp; Waistcoats</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/lingerie"
+                                style="color:#fb56c1" class="title">Lingerie &amp; Sleepwear</a><a
+                                href="https://www.myntra.com/bra" class="link">Bras &amp; Lingerie Sets</a><a
+                                href="https://www.myntra.com/women-briefs" class="link">Briefs</a><a
+                                href="https://www.myntra.com/women-clothing-shapewear" class="link">Shapewear</a><a
+                                href="https://www.myntra.com/women-loungewear-and-nightwear" class="link">Sleepwear
+                                &amp; Loungewear</a><a href="https://www.myntra.com/women-swimwear"
+                                class="link">Swimwear</a><a href="https://www.myntra.com/camisoles-and-thermals"
+                                class="link">Camisoles &amp; Thermals</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/women-footwear" style="color:#fb56c1"
+                                class="title">Footwear</a><a href="https://www.myntra.com/women-casual-shoes"
+                                class="link">Flats &amp; Casual Shoes</a><a href="https://www.myntra.com/women-heels"
+                                class="link">Heels</a><a href="https://www.myntra.com/women-boots"
+                                class="link">Boots</a><a href="https://www.myntra.com/women-sports-shoes"
+                                class="link">Sports Shoes &amp; Floaters</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/women-sportswear"
+                                style="color:#fb56c1" class="title">Sports &amp; Active Wear</a><a
+                                href="https://www.myntra.com/women-sportswear-clothing" class="link">Clothing</a><a
+                                href="https://www.myntra.com/women-sports-shoes" class="link">Footwear</a><a
+                                href="https://www.myntra.com/women-sports-accessories" class="link">Sports
+                                Accessories</a><a href="https://www.myntra.com/women-sports-equipments"
+                                class="link">Sports Equipment</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/handbags-and-bags"
+                                style="color:#fb56c1" class="title">Handbags, Bags &amp; Wallets</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/women-watches"
+                                style="color:#fb56c1" class="title">Watches &amp; Wearables</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/women-sunglasses"
+                                style="color:#fb56c1" class="title">Sunglasses &amp; Frames</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/headphones-speakers" style="color:#fb56c1"
+                                class="title">Headphones &amp; Speakers</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/trolley-bags"
+                                style="color:#fb56c1" class="title">Luggage &amp; Trolleys</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/women-personal-care"
+                                style="color:#fb56c1" class="title">Beauty &amp; Personal Care</a><a
+                                href="https://www.myntra.com/makeup" class="link">Makeup</a><a
+                                href="https://www.myntra.com/women-skincare" class="link">Skincare</a><a
+                                href="https://www.myntra.com/premiumbeauty" class="link">Premium Beauty</a><a
+                                href="https://www.myntra.com/women-perfumes" class="link">Fragrances</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/women-accessories"
+                                style="color:#fb56c1" class="title">Belts, Scarves &amp; More</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/women-jewellery"
+                                style="color:#fb56c1" class="title">Jewellery</a><a
+                                href="https://www.myntra.com/fashion-jewellery" class="link">Fashion Jewellery</a><a
+                                href="https://www.myntra.com/fine-jewellery" class="link">Fine Jewellery</a>
+                            <div class="whitespace"></div>
+                        </div>
+                    </div>
+                    <div data-index="2" data-color="#f26a10" class="pane fashion" style="padding-left: 10px;">
+                        <div class="block"><a href="https://www.myntra.com/boys-clothing" style="color:#f26a10"
+                                class="title">Boys Clothing</a><a href="https://www.myntra.com/boys-tshirts"
+                                class="link">T-Shirts</a><a href="https://www.myntra.com/boys-shirts"
+                                class="link">Shirts</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ALounge%20Shorts%2CShorts%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Shorts</a><a href="https://www.myntra.com/boys-jeans-trousers"
+                                class="link">Jeans</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ATrousers%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Trousers</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3AClothing%20Set%2CDungarees%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Clothing Sets</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ABlazers%2CKurta%20Sets%2CKurtas%2CNehru%20Jackets%2CSherwani%2CWaistcoat%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Ethnic Wear</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ALounge%20Pants%2CPyjamas%2CTrack%20Pants%2CTracksuits%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Track Pants &amp; Pyjamas</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ACoats%2CJackets%2CSweaters%2CSweatshirts%2CThermal%20Bottoms%2CThermal%20Set%2CThermal%20Tops%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Jacket, Sweater &amp; Sweatshirts</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ABoxers%2CBriefs%2CInnerwear%20Vests%2CNight%20suits%2CSleepsuit%3A%3AGender%3Aboys%2Cboys%20girls"
+                                class="link">Innerwear &amp; Sleepwear</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/girls-clothing" style="color:#f26a10"
+                                class="title">Girls Clothing</a><a href="https://www.myntra.com/girls-dresses"
+                                class="link">Dresses</a><a href="https://www.myntra.com/girls-tops"
+                                class="link">Tops</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ALounge%20Tshirts%2CTshirts%3A%3AGender%3Aboys%20girls%2Cgirls"
+                                class="link">Tshirts</a><a href="https://www.myntra.com/girls-clothing-set"
+                                class="link">Clothing Sets</a><a
+                                href="https://www.myntra.com/drpgirl?f=Categories%3AKurta%20Sets%2CKurtas%2CKurtis%2CLehenga%20Choli%2CTunics"
+                                class="link">Ethnic wear</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ADungarees%2CJumpsuit%3A%3AGender%3Aboys%20girls%2Cgirls"
+                                class="link">Dungarees &amp; Jumpsuits</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ALounge%20Shorts%2CShorts%2CSkirts%3A%3AGender%3Aboys%20girls%2Cgirls"
+                                class="link">Skirts &amp; shorts</a><a href="https://www.myntra.com/girls-leggings"
+                                class="link">Tights &amp; Leggings</a><a
+                                href="https://www.myntra.com/girls-jeans-trousers-capris" class="link">Jeans, Trousers
+                                &amp; Capris</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ACoats%2CJackets%2CSweaters%2CSweatshirts%2CThermal%20Bottoms%2CThermal%20Set%2CThermal%20Tops%3A%3AGender%3Aboys%20girls%2Cgirls"
+                                class="link">Jacket, Sweater &amp; Sweatshirts</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ABoxers%2CBra%2CBriefs%2CInnerwear%20Vests%2CLounge%20Pants%2CLounge%20Shorts%2CLounge%20Tshirts%2CNight%20suits%2CNightdress%2CSleepsuit%3A%3AGender%3Aboys%20girls%2Cgirls"
+                                class="link">Innerwear &amp; Sleepwear</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/boys-footwear"
+                                style="color:#f26a10" class="title">Boys Footwear</a><a
+                                href="https://www.myntra.com/boys-casual-shoes" class="link">Casual Shoes</a><a
+                                href="https://www.myntra.com/boys-sports-shoes" class="link">Sports Shoes</a><a
+                                href="https://www.myntra.com/boys-sandals" class="link">Sandals</a><a
+                                href="https://www.myntra.com/boys-flip-flops" class="link">Flip flops</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/girls-footwear" style="color:#f26a10"
+                                class="title">Girls Footwear</a><a href="https://www.myntra.com/girls-flats"
+                                class="link">Flats</a><a href="https://www.myntra.com/girls-casual-shoes"
+                                class="link">Casual Shoes</a><a href="https://www.myntra.com/girls-heels"
+                                class="link">Heels</a><a href="https://www.myntra.com/girls-flip-flops"
+                                class="link">Flip flops</a><a href="https://www.myntra.com/girls-sandals"
+                                class="link">Sandals</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/Infants" style="color:#f26a10"
+                                class="title">Infants</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ABodysuit%2CRompers%2CSleepsuit"
+                                class="link">Rompers &amp; Onesies</a><a
+                                href="https://www.myntra.com/kids?f=Age%3A0M-6M%2C0m-6m%2C1Y-2Y%2C1y-2y%2C6M-1Y%2C6m-1y%3A%3ACategories%3AClothing%20Set"
+                                class="link">Clothing Sets</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ALounge%20Tshirts%2CShirts%2CTops%2CTshirts%3A%3AAge%3A0m-6m%2C1y-2y%2C6m-1y"
+                                class="link">Tshirts &amp; Tops</a><a
+                                href="https://www.myntra.com/girls-dresses?f=Age%3A0M-6M%2C0m-6m%2C1Y-2Y%2C1y-2y%2C6M-1Y%2C6m-1y"
+                                class="link">Dresses</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ACapris%2CJeans%2CJeggings%2CLeggings%2CLounge%20Pants%2CLounge%20Shorts%2CPyjamas%2CShorts%2CSkirts%2CTrack%20Pants%2CTrousers%3A%3AAge%3A0m-6m%2C1y-2y%2C6m-1y"
+                                class="link">Bottom wear</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ACoats%2CJackets%2CSweaters%2CSweatshirts%2CThermal%20Bottoms%2CThermal%20Set%2CThermal%20Tops%3A%3AAge%3A0m-6m%2C1y-2y%2C6m-1y"
+                                class="link">Winter Wear</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ABoxers%2CBriefs%2CInnerwear%20Vests%2CLounge%20Pants%2CLounge%20Shorts%2CLounge%20Tshirts%2CNight%20suits%2CNightdress%2CSleepsuit%3A%3AAge%3A0m-6m%2C1y-2y%2C6m-1y"
+                                class="link">Innerwear &amp; Sleepwear</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3ABaby%20Care%20Products%2CBibs%2CBody%20Lotion%2CBody%20Oil%2CBody%20Wash%20and%20Scrub%2CBooties%2CFeeding%20Essentials%2CMittens"
+                                class="link">Infants Accessories</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/kids-accessories" style="color:#f26a10"
+                                class="title">Kids Accessories</a><a href="https://www.myntra.com/kids-bags-backpacks"
+                                class="link">Bags &amp; Backpacks</a><a href="https://www.myntra.com/kids-watches"
+                                class="link">Watches</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3AAnklet%2CBangle%2CBracelet%2CEarrings%2CHair%20Accessory%2CJewellery%20Set%2CNecklace%20and%20Chains%2CPendant"
+                                class="link">Jewellery &amp; Hair Accessories</a><a
+                                href="https://www.myntra.com/kids?f=Categories%3AFrames%2CSunglasses"
+                                class="link">Eyewear</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/kids-home-bath"
+                                style="color:#f26a10" class="title">Home &amp; Bath</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/kids" style="color:#f26a10"
+                                class="title">Brands</a><a href="https://www.myntra.com/united-colors-of-benetton-kids"
+                                class="link">United Colors of Benetton</a><a href="https://www.myntra.com/yk"
+                                class="link">Yk</a><a href="https://www.myntra.com/us-polo-assn-kids" class="link">U.S.
+                                Polo Assn. Kids</a><a href="https://www.myntra.com/kids?f=Brand%3AGAP" class="link">GAP
+                                Kids</a><a href="https://www.myntra.com/kids?f=Brand%3AGini%20and%20Jony%2CPalm%20Tree"
+                                class="link">Gini &amp; Jony</a><a href="https://www.myntra.com/peppermint"
+                                class="link">Peppermint</a><a href="https://www.myntra.com/kids?f=brand%3Anext"
+                                class="link">next</a><a href="https://www.myntra.com/allen-solly-junior"
+                                class="link">Allen Solly Junior</a><a href="https://www.myntra.com/kids?f=Brand%3ANike"
+                                class="link">Nike</a><a href="https://www.myntra.com/kids?f=brand%3APepe%20Jeans"
+                                class="link">Pepe Jeans</a>
+                            <div class="whitespace"></div>
+                        </div>
+                    </div>
+                    <div data-index="3" data-color="#f2c210" class="pane fashion" style="padding-left: 10px;">
+                        <div class="block"><a href="https://www.myntra.com/bedding" style="color:#f2c210"
+                                class="title">Bed Linen &amp; Furnishing</a><a href="https://www.myntra.com/bedsheets"
+                                class="link">Bedsheets</a><a href="https://www.myntra.com/bedding-sets"
+                                class="link">Bedding Sets</a><a href="https://www.myntra.com/blankets-quilts-and-dohars"
+                                class="link">Blankets, Quilts &amp; Dohars</a><a href="https://www.myntra.com/pillows"
+                                class="link">Pillows &amp; Pillow Covers</a><a href="https://www.myntra.com/bed-covers"
+                                class="link">Bed Covers</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/bath" style="color:#f2c210"
+                                class="title">Bath</a><a href="https://www.myntra.com/towels" class="link">Bath
+                                Towels</a><a href="https://www.myntra.com/hand-towels" class="link">Hand &amp; Face
+                                Towels</a><a href="https://www.myntra.com/beach-towels" class="link">Beach Towels</a><a
+                                href="https://www.myntra.com/towel-set" class="link">Towels Set</a><a
+                                href="https://www.myntra.com/bath-rugs" class="link">Bath Rugs</a><a
+                                href="https://www.myntra.com/bath-robes" class="link">Bath Robes</a><a
+                                href="https://www.myntra.com/bathroom-accessories" class="link">Bathroom Accessories</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/curtains"
+                                style="color:#f2c210" class="title">Curtains </a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/cushion-and-cushion-covers"
+                                style="color:#f2c210" class="title">Cushions &amp; Cushion Covers</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/flooring"
+                                style="color:#f2c210" class="title">Flooring</a><a href="https://www.myntra.com/carpets"
+                                class="link">Carpets</a><a href="https://www.myntra.com/floor-mats-dhurries"
+                                class="link">Floor Mats &amp; Dhurries</a><a href="https://www.myntra.com/doormats"
+                                class="link">Door Mats</a>
+                            <div class="whitespace"></div><a
+                                href="https://www.myntra.com/home-furnishing-kitchen-table-menu" style="color:#f2c210"
+                                class="title">Kitchen &amp; Table</a><a
+                                href="https://www.myntra.com/tableware-and-serveware" class="link">Tableware &amp;
+                                Serveware</a><a href="https://www.myntra.com/home-furnishing-kitchen-cookware-tools"
+                                class="link">Cookware &amp; Kitchen Tools</a><a
+                                href="https://www.myntra.com/home-furnishing-kitchen-storage" class="link">Kitchen
+                                Storage</a><a href="https://www.myntra.com/home-furnishing-kitchen-linen"
+                                class="link">Table Covers &amp; Furnishings</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/home-decor" style="color:#f2c210"
+                                class="title">Home Décor</a><a
+                                href="https://www.myntra.com/artificial-flowers-and-plants" class="link">Plants &amp;
+                                Planters</a><a href="https://www.myntra.com/candles" class="link">Aromas, Candles &amp;
+                                Candle Holders</a><a href="https://www.myntra.com/clocks" class="link">Clocks</a><a
+                                href="https://www.myntra.com/mirrors" class="link">Mirrors</a><a
+                                href="https://www.myntra.com/wall-decor" class="link">Wall Décor</a><a
+                                href="https://www.myntra.com/wall-shelves" class="link">Wall Shelves</a><a
+                                href="https://www.myntra.com/fountains" class="link">Fountains</a><a
+                                href="https://www.myntra.com/home-decor-showpieces-vases" class="link">Showpieces &amp;
+                                Vases</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/lamps-and-lighting"
+                                style="color:#f2c210" class="title">Lamps &amp; lighting</a><a
+                                href="https://www.myntra.com/floor-lamps" class="link">Floor lamps</a><a
+                                href="https://www.myntra.com/table-lamps" class="link">Table lamps</a><a
+                                href="https://www.myntra.com/wall-lamps" class="link">Wall lamps</a>
+                            <div class="whitespace"></div><a href="https://www.myntra.com/storage" style="color:#f2c210"
+                                class="title">Storage</a><a href="https://www.myntra.com/organisers"
+                                class="link">Organisers</a><a href="https://www.myntra.com/hooks-and-holders"
+                                class="link">Hooks &amp; Holders</a>
+                            <div class="whitespace"></div>
+                        </div>
+                        <div class="block"><a href="https://www.myntra.com/home-furnishing" style="color:#f2c210"
+                                class="title">Brands</a><a href="https://www.myntra.com/bombay-dyeing"
+                                class="link">Bombay Dyeing</a><a href="https://www.myntra.com/spaces"
+                                class="link">Spaces</a><a href="https://www.myntra.com/ddecor"
+                                class="link">D'Decor</a><a href="https://www.myntra.com/portico-new-york"
+                                class="link">Portico New York</a><a href="https://www.myntra.com/pure-home-and-living"
+                                class="link">Pure Home &amp; Living</a><a href="https://www.myntra.com/swayam"
+                                class="link">Swayam</a><a href="https://www.myntra.com/raymond-home"
+                                class="link">Raymond Home</a><a href="https://www.myntra.com/maspar"
+                                class="link">Maspar</a><a href="https://www.myntra.com/corelle"
+                                class="link">Corelle</a><a href="https://www.myntra.com/trident"
+                                class="link">Trident</a><a href="https://www.myntra.com/cortina"
+                                class="link">Cortina</a><a href="https://www.myntra.com/welhome"
+                                class="link">WELHOME</a><a href="https://www.myntra.com/random"
+                                class="link">Random</a><a href="https://www.myntra.com/home-sparkle" class="link">Home
+                                Sparkle</a><a href="https://www.myntra.com/romee?sort=popularity"
+                                class="link">ROMEE</a><a href="https://www.myntra.com/sej-by-nisha-gupta"
+                                class="link">SEJ by Nisha Gupta</a>
+                            <div class="whitespace"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flyout bag">
+                    <div class="arrow"></div>
+                    <div class="contents"></div>
+                </div>
+                <div class="flyout user" style="position: fixed; top: 78px; left: 686.325px;">
+                    <div class="arrow" style="left: 140.5px;"></div>
+                    <div class="contents">
+                        <div class="info"><a href="/my/profile" data-track="edit_profile" target="_self"
+                                class="section large">
+                                <div class="sub-title">rahul.09chouhan1996@gmail.com</div>
+                            </a></div>
+                        <div class="links"><a href="/my/orders" data-track="orders" target="_self" class="section">
+                                <div class="item">My Orders</div>
+                            </a><a href="/checkout/wishlist" data-track="wishlist" target="_self" class="section">
+                                <div class="item">My Wishlist</div>
+                            </a><a href="/my/myntracredit" data-track="myntracredit" target="_self" class="section">
+                                <div class="item">Myntra Credit</div>
+                            </a></div>
+                        <div class="links"> <a href="/my/phonepe" data-track="phonepe" target="_self" class="section">
+                                <div class="item">PhonePe wallet</div>
+                            </a><a href="/my/coupons" data-track="coupons" target="_self" class="section">
+                                <div class="item">Coupons</div>
+                            </a><a href="/my/savedcards" data-track="savedcards" target="_self" class="section">
+                                <div class="item">Saved Cards</div>
+                            </a><a href="/my/address" data-track="address" target="_self" class="section">
+                                <div class="item">Saved Addresses</div>
+                            </a></div>
+                        <div class="actions"><a href="/my/profile/edit" data-track="edit_profile" target="_self"
+                                class="section large">
+                                <div class="item">Edit Profile</div>
+                            </a><a data-track="logout" class="section center logout-action">
+                                <div class="button">Logout</div>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="my-container profile">
+            <div class="content">
+                <div class="profile card">
+                    <div class="profile-data">
+                        <section></section>
+                        <div class="tabs"></div>
+                        <div class="tab-content">
+                            <h4>Primary Information</h4>
+                            <div class="page-content">
+                                <div class="profile-picture">
+                                    <div class="image"></div>
+                                </div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="title">First Name</td>
+                                            <td>{{user.firstName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Last Name</td>
+                                            <td>{{user.lastName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Email</td>
+                                            <td>{{user.email}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Phone No</td>
+                                            <td>{{user.phone}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Address</td>
+                                            <td class="bio">{{user.address}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Product Name</td>
+                                            <td>{{user.productName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">CAL</td>
+                                            <td>{{user.cal}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="title">Expiry Date</td>
+                                            <td>{{user.expiry}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="links"><a routerLink="/edit/{{_id}}" class="button primary edit1">Edit
+                                        Profile</a><a routerLink="/edit/{{_id}}" class="button primary edit2">Edit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

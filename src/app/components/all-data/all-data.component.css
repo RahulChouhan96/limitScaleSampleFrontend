@@ -1,3 +1,53 @@
-.sizing{
-    padding-left: 30px;
+@font-face {
+	font-family: DIN;
+	src: url('/skin2/fonts/DINWeb-Medium.eot');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: DIN;
+	src: url('/skin2/fonts/DINWeb.eot');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+/* then for WOFF-capable browsers */
+@font-face {
+	font-family: DIN;
+	src: url('/skin2/fonts/DINWeb-Medium.woff') format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: DIN;
+	src: url('/skin2/fonts/DINWeb.woff') format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*WHITNEY FONTS HERE**/
+
+@font-face {
+	font-family: 'Whitney';
+	src: url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-Book.eot');
+	src: url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-Book.eot?#iefix') format('embedded-opentype'), url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-Book.woff') format('woff'), url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-Book.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Whitney';
+	src: url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-SemiBold.eot');
+	src: url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-SemiBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-SemiBold.woff') format('woff'), url('https://cdn.myntassets.com/skin2/fonts/WhitneyHTF-SemiBold.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: credit-card;
+	src: url(https://cdn.myntassets.com/skin2/fonts/kreditfront.ttf) format("truetype");
+	font-style: normal;
 }

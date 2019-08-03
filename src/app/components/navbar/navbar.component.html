@@ -1,0 +1,23 @@
+<div class="header-outer new">
+    <div class="header-cnt new">
+        <div class="header"><a href="" class="logo">
+                <div class="header-sprite "><img src="../../../assets/limitscallogo.jpg" height="60px" width="60px"
+                        alt=""></div>
+            </a>
+            
+            <div class="query"><input id="q" name="search" [(ngModel)]="key" (keyup)="search()" placeholder="Search"
+                    autocomplete="off" list="suggestions">
+                <datalist id="suggestions">
+                    <option *ngFor="let suggestion of suggestions" [value]="suggestion"></option>
+                </datalist>
+                <a class="cursor" (click)="searchAll()"><i class="material-icons styleit">search</i></a>
+            </div>
+            <div class="navbar">
+                <div class="head"><a routerLink="/seeAll" data-index="0" class="main">See All</a><a routerLink=""
+                        data-index="1" class="main">Add</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

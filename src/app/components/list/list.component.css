@@ -1,3 +1,32 @@
 .sizing{
     padding-left: 30px;
 }
+
+.colorit{
+    color: #007bff;
+    cursor: pointer;
+}
+
+.incr{
+    font-size: 45px;
+    color: white;
+}
+
+.asideit{
+    text-align: center;
+}
+
+/* .keepDown{
+    display: block;
+    float: none;
+} */
+
+.pos{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+}

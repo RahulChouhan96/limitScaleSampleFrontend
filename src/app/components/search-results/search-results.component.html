@@ -1,11 +1,5 @@
 <div class="limiter">
-    <div class="asideit">
-        <a routerLink="">
-            <i class="material-icons incr">add</i>
-        </a>
-    </div>
-    <div class="container-table100 ">
-
+    <div class="container-table100">
         <div class="wrap-table100">
             <div class="table100 ver1 m-b-110">
                 <div class="table100-head">
@@ -48,12 +42,5 @@
                 </div>
             </div>
         </div>
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link"  style="cursor: pointer" [class.disabled]="previousPage()" (click)="changePage(-1)">Previous</a></li>
-            <li class="page-item"><a class="page-link"  style="cursor: pointer" (click)="changePage(1)">1</a></li>
-            <li class="page-item"><a class="page-link" style="cursor: pointer" [class.disabled]="pages(2)" (click)="changePage(2)">2</a></li>
-            <li class="page-item"><a class="page-link" style="cursor: pointer" [class.disabled]="pages(3)" (click)="changePage(3)">3</a></li>
-            <li class="page-item"><a class="page-link"  style="cursor: pointer" [class.disabled]="nextPage()" (click)="changePage(4)">Next</a></li>
-        </ul>
     </div>
 </div>

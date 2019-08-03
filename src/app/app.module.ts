@@ -9,6 +9,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './components/list/list.component';
 import { AllDataComponent } from './components/all-data/all-data.component';
 import { EditComponent } from './components/edit/edit.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { EditComponent } from './components/edit/edit.component';
     FormComponent,
     ListComponent,
     AllDataComponent,
-    EditComponent
+    EditComponent,
+    NavbarComponent,
+    SearchResultsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
